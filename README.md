@@ -53,6 +53,23 @@ Notes:
 - The `package`, `release`, and `release:mac` scripts run **unsigned by default** on macOS so local builds do not fail on automatic `codesign` checks.
 - For a properly signed macOS package, use `npm run release:mac:signed`.
 
+## GitHub Releases
+
+This repository includes a GitHub Actions workflow at `.github/workflows/release.yml`.
+
+- Pushing a tag like `v1.0.0` triggers builds on macOS, Linux, and Windows.
+- The workflow creates or updates the matching GitHub Release automatically.
+- Built installers and archives are uploaded both as workflow artifacts and as Release assets.
+
+Example:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+If you want to trigger the workflow manually, use **Actions -> Release -> Run workflow** in GitHub and provide the tag name, for example `v1.0.0`.
+
 ## Usage
 
 1. Start the application.
