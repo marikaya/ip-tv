@@ -1,0 +1,329 @@
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  background: #020617;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-shell {
+  min-height: 100%;
+  background: #020617;
+}
+
+.desktop-sider {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  background: #0b1220 !important;
+  border-inline-end: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.sidebar-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  padding: 12px;
+}
+
+.brand-block h4.ant-typography {
+  margin: 2px 0 0;
+}
+
+.sidebar-tabs {
+  min-height: 0;
+  flex: 1;
+}
+
+.sidebar-tabs .ant-tabs-content-holder {
+  min-height: 0;
+}
+
+.main-layout {
+  min-width: 0;
+  background: linear-gradient(180deg, #030712 0%, #020617 100%);
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: auto;
+  line-height: normal;
+  padding: 10px 14px;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.main-header h4.ant-typography {
+  margin: 0;
+  color: #f8fafc;
+}
+
+.top-menu-row {
+  min-height: 28px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.top-menu-button {
+  padding-inline: 8px !important;
+  color: #dbeafe !important;
+}
+
+.top-menu-button:hover {
+  background: rgba(148, 163, 184, 0.08) !important;
+}
+
+.main-content {
+  padding: 12px;
+}
+
+.main-footer {
+  padding: 6px 14px !important;
+  min-height: 32px;
+  background: rgba(2, 6, 23, 0.72) !important;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.footer-source {
+  max-width: min(48vw, 520px);
+}
+
+.panel-card .ant-card-body,
+.player-card .ant-card-body,
+.detail-card .ant-card-body {
+  padding: 10px !important;
+}
+
+.content-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 200px 260px minmax(0, 1fr);
+  align-items: start;
+}
+
+.panel-card,
+.player-card,
+.detail-card,
+.episode-panel,
+.meta-panel {
+  background: rgba(15, 23, 42, 0.94);
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+.panel-list,
+.resume-list,
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+}
+
+.panel-list {
+  max-height: calc(100vh - 228px);
+}
+
+.resume-list {
+  max-height: calc(100vh - 210px);
+}
+
+.nav-row,
+.episode-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.35);
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-row:hover,
+.episode-row:hover {
+  border-color: rgba(56, 189, 248, 0.22);
+  background: rgba(15, 23, 42, 0.86);
+}
+
+.nav-row.is-selected,
+.episode-row.is-selected {
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(14, 116, 144, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.2);
+}
+
+.nav-row-copy,
+.episode-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.breadcrumb-wrap {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.breadcrumb-wrap .ant-breadcrumb {
+  font-size: 12px;
+}
+
+.details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.player-video {
+  display: block;
+  width: 100%;
+  min-height: 320px;
+  max-height: 56vh;
+  border-radius: 10px;
+  background: #000;
+}
+
+.player-meta {
+  margin-top: 8px;
+}
+
+.season-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 12px;
+}
+
+.episode-list {
+  max-height: 420px;
+}
+
+.episode-row {
+  justify-content: space-between;
+}
+
+.episode-play-icon {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.info-row.is-multiline .info-value {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.source-hint {
+  margin-top: 4px;
+  color: #94a3b8;
+  word-break: break-word;
+}
+
+.panel-search-input {
+  width: 170px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.options-card {
+  background: rgba(15, 23, 42, 0.82);
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+.header-search {
+  width: 220px;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  .content-grid {
+    grid-template-columns: 180px 240px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-list {
+    max-height: 260px;
+  }
+
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .desktop-sider {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-header {
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .header-search {
+    width: 100%;
+  }
+
+  .panel-search-input {
+    width: 100%;
+  }
+
+  .player-video {
+    min-height: 220px;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
